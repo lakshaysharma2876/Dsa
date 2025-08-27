@@ -6,9 +6,9 @@ using namespace std;
 int main() {
     // Write C++ code here
     
-    vector<int> s = {3,1,2};
-    s.erase(s.begin());
-
-    for(auto i:s) cout << i << " ";
+    vector<int> s = {1,2};
+    
+    cout << ceil(2.5);
+    
     return 0;
 }

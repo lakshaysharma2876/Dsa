@@ -12,6 +12,19 @@ long long nCr(int n, int r) {
     return res;
 }
 
+//print the nth row
+vector<int> row_of_triangle(int row) {
+    vector<int> res;
+    int ans = 1;
+    res.push_back(ans);
+    for(int i=1; i<row; i++) {
+        ans = ans* (row-i)/i;
+        res.push_back(ans);
+    }
+
+    return res;
+}
+
 int main() {
     //there are 3 types of problems for pascal triangle
 
@@ -20,14 +33,19 @@ int main() {
     // 3. print the entire pascal triangle 
 
 
-    cout << "Enter the number of rows and colums :" << endl;
-    int r,c;
+    // cout << "Enter the number of rows and colums :" << endl;
+    // int r,c;
 
-    cin >> r >> c;
+    //cin >> r >> c;
     
-    long long res = nCr(r-1,c-1);
-    cout << "The element at 'r'th row and 'c'th column is : " << res;
+    //long long res = nCr(r-1,c-1);
+    //cout << "The element at 'r'th row and 'c'th column is : " << res;
 
+    int n;
+    cout << "Enter the row number : ";
+    cin >> n;
 
+    cout << n << "th row is : ";
+    for(auto i : row_of_triangle(n)) cout << i << " ";
     return 0;
 }
