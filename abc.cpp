@@ -6,9 +6,16 @@ using namespace std;
 int main() {
     // Write C++ code here
     
-    vector<int> s = {1,2};
+    vector<int> s = {1,2,3};
     
-    cout << ceil(2.5);
+    vector<vector<int>> ans;
+    ans.push_back({2,4,5});
+    
+    int rows[10] = {0};
+    // for(int i : rows) cout << i << " ";
+
+    //cout << (-1 && -1) << " ";
+    
     
     return 0;
 }

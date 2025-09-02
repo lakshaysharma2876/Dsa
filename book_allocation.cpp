@@ -26,6 +26,8 @@ int allocateBooks(vector<int> book, int m) {
     //     
     //     if(cnt == m) return i;
     // }
+
+    if(m > book.size()) return -1;
     while(low <= high) {
         int mid = (low+high)/2;
         int cnt = countStudents(book,mid);
